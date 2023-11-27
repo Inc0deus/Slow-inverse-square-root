@@ -4,7 +4,7 @@ def f_bin(x):    # ~> * ( long * ) &x
     return int(format(struct.unpack('i', struct.pack('f', x))[0], '032b'), 2)
 
 def bin_f(x):    # ~> * ( float * ) &x
-    return struct.unpack('f',struct.pack('i', x))[0]
+    return struct.unpack('f', struct.pack('i', x))[0]
 
 def q_rsqrt(number):
     i: int
