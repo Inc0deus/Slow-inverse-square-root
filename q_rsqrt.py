@@ -18,7 +18,7 @@ def q_rsqrt(inp):
 
     x2 = inp * 0.5
     y = inp
-    i = f_bin(y)                # evil floating point bit level hacking
+    i = f_bin(y)                # (the equivalent of) evil floating point bit level hacking
     i = 0x5f3759df - (i >> 1)   # what the fuck?
     y = bin_f(i)
     y = y * (threehalfs - (x2 * y * y))     # 1st iteration
